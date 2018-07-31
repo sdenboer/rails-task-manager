@@ -1,0 +1,11 @@
+<%= form_for(@task) do |task| %>
+  <%= task.label :title %>
+  <%= task.text_field :title %>
+<br><br>
+  <%= task.label :details %>
+  <%= task.text_field :details %>
+<br><br>
+<h3>Have you finished the task?:  <%= task.check_box :completed, {}, "true", "false" %></h3>
+<br><br>
+  <%= task.submit %>
+<% end %>
